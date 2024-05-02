@@ -23,8 +23,22 @@ const customer = {
   // Change code above this line
 };
 
-customer.setDiscount(0.15);
-console.log(customer.getDiscount()); // 0.15
-customer.addOrder(5000, 'Steak');
-console.log(customer.getBalance()); // 19750
-console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+const testTask1 = () => {
+  document.getElementById('result').innerHTML = '';
+
+  customer.setDiscount(0.15);
+
+  let tt = customer.getDiscount(); // 0.15
+  console.log(tt);
+  logWindow.log(tt);
+
+  customer.addOrder(5000, 'Steak');
+
+  tt = customer.getBalance(); // 19750
+  console.log(tt);
+  logWindow.log(tt);
+
+  tt = customer.getOrders(); // ["Burger", "Pizza", "Salad", "Steak"]
+  console.log(tt);
+  logWindow.log(tt);
+};

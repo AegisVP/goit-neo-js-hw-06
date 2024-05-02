@@ -13,10 +13,22 @@ class Storage {
   }
 }
 
-const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+const testTask2 = () => {
+  document.getElementById('result').innerHTML = '';
 
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-storage.addItem('Droid');
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-storage.removeItem('Prolonger');
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+  const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+
+  let tt = storage.getItems(); // ["Nanitoids", "Prolonger", "Antigravitator"]
+  console.log(tt);
+  logWindow.log(tt);
+
+  storage.addItem('Droid');
+  tt = storage.getItems(); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+  console.log(tt);
+  logWindow.log(tt);
+
+  storage.removeItem('Prolonger');
+  tt = storage.getItems(); // ["Nanitoids", "Antigravitator", "Droid"]
+  console.log(tt);
+  logWindow.log(tt);
+};

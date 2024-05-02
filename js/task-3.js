@@ -17,12 +17,26 @@ class StringBuilder {
   }
 }
 
-const builder = new StringBuilder('.');
+const testTask3 = () => {
+  document.getElementById('result').innerHTML = '';
+  const builder = new StringBuilder('.');
 
-console.log(builder.getValue()); // "."
-builder.padStart('^');
-console.log(builder.getValue()); // "^."
-builder.padEnd('^');
-console.log(builder.getValue()); // "^.^"
-builder.padBoth('=');
-console.log(builder.getValue()); // "=^.^="
+  let tt = builder.getValue(); // "."
+  console.log(tt);
+  logWindow.log(tt);
+  builder.padStart('^');
+
+  tt = builder.getValue(); // "^."
+  console.log(tt);
+  logWindow.log(tt);
+  builder.padEnd('^');
+
+  tt = builder.getValue(); // "^.^"
+  console.log(tt);
+  logWindow.log(tt);
+  builder.padBoth('=');
+
+  tt = builder.getValue(); // "=^.^="
+  console.log(tt);
+  logWindow.log(tt);
+};
